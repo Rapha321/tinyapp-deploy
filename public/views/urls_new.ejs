@@ -1,0 +1,13 @@
+<%- include partials/_header %>
+
+  <body style="font-size:15px; padding:50px;">
+  <%- include("login") %>
+
+  <form action="/urls/new" method="POST" style="margin:75px;">
+    <label for="longURL">Enter a URL:</label>
+    <input id="newURL" type="text" name="newURL" placeholder="http://" style="width: 300px">
+    <input type="submit" value="Submit">
+  </form>
+
+  </body>
+</html>

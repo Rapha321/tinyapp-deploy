@@ -1,0 +1,34 @@
+{
+  "name": "tinyapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node express_server.js",
+    "start:dev": "nodemon express_server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Rapha321/TinyApp-Project.git"
+  },
+  "author": "Raphael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rapha321/TinyApp-Project/issues"
+  },
+  "homepage": "https://github.com/Rapha321/TinyApp-Project#readme",
+  "dependencies": {
+    "bcrypt": "2.0.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "node": "^11.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}

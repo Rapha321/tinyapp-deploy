@@ -1,0 +1,15 @@
+<%- include partials/_header %>
+
+  <body>
+  <%- include("login") %>
+
+      <ul>
+        <form action="/urls/<%= shortURL %>/update" method="post" style="margin:100px;">
+        <h5>ShortURL: <%= shortURL %></h5>
+        <input id="newLongURL" name= "newLongURL" type="text" placeholder="<%= longURL %>" style="width: 400px">
+        <input class="btn btn-primary" type="submit" value="Update">
+      </ul>
+
+  </body>
+</html>
+

@@ -1,0 +1,42 @@
+<%- include partials/_header %>
+
+
+<h1>Welcome to TinyApp!</h1>
+
+
+<div class="jumbotron">
+
+<% if(!currentUser) { %>
+
+  <form action="/login" method="POST" >
+    <h4>Login:</h4>
+    <table>
+      <tr>
+        <td><label>Email: </label></td>
+        <td><input type="email" name="email"></td>
+      </tr>
+      <tr>
+        <td><label>Password: </label></td>
+        <td><input type="password" name="password"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button class="btn btn-success">Sign in</button></td>
+      </tr>
+    </table>
+  </form>
+  <br>
+  <h6>Don't have an account? <a href="/register">register!</a></h6>
+<% } else { %>
+    <form method="POST" action="/logout">
+      <h5> <b><%= currentUser.email %></b> is now logged in...</h5>
+      <button class="btn btn-secondary">Logout</button>
+    </form>
+
+<% } %>
+
+
+</div>
+
+
+

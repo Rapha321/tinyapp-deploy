@@ -1,0 +1,38 @@
+<%- include partials/_header%>
+
+
+<body>
+<%- include("login") %>
+
+  <ul class="jumbotron">
+    <h4>Create new short URL <a href="/urls/new">here</a>!</h4>
+    <p>Your Short URLs:</p>
+
+            <table>
+              <tr>
+                <th width="100px">Short URL</th>
+                <th width="250px">Long URL</th>
+                <th width="50px"></th>
+                <th>Delete</th>
+              </tr>
+
+              <% for (let eachURL in urls) { %>
+              <% if (currentUser.id === urls[eachURL].id) { %>
+              <form method="POST" action="/urls/<%=eachURL%>/delete">
+              <tr>
+                <td><%= eachURL %> </td>
+                <td><%= urls[eachURL].URL %></td>
+                <td><a href="/urls/<%= eachURL %>">Edit</a></td>
+                <td><button class="btn btn-danger"> <i class="fas fa-trash-alt"></i></button></td>
+              </tr>
+              <% } %>
+
+              <% }; %>
+            </table>
+          </form>
+
+
+  </ul>
+
+</body>
+</html>
